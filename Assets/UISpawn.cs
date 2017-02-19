@@ -11,6 +11,7 @@ public class UISpawn : MonoBehaviour {
     public GameObject cameraUI;
     public GameObject qrReader;
     public GameObject ARCamera;
+    public Camera Hololens;
 
 	// Use this for initialization
 	void Start () {
@@ -40,13 +41,15 @@ public class UISpawn : MonoBehaviour {
     public void spawnPatientUI()
     {
         destroyUI();
-        Instantiate(patientUI);
+        GameObject temp = Instantiate(patientUI);
+        temp.GetComponent<Canvas>().worldCamera = Hololens;
     }
 
     public void spawnWatsonUI()
     {
         destroyUI();
-        Instantiate(watsonUI);
+        GameObject temp = Instantiate(watsonUI);
+        temp.GetComponent<Canvas>().worldCamera = Hololens;
     }
 
     public void spawnNotepadUI()
