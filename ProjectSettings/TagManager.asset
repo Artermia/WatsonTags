@@ -7,6 +7,8 @@ TagManager:
   - UserInterface
   - AR Camera
   - Tip
+  - Vuforia Image
+  - V Image
   layers:
   - Default
   - TransparentFX

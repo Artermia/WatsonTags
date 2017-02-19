@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 using System;
 using System.Collections;
 
@@ -20,10 +22,18 @@ public class VuforiaScanner : MonoBehaviour
 
 	private BarcodeReader barCodeReader;
 
+	Texture2D two_texture;
+
 	void Start()
 	{        
 		barCodeReader = new BarcodeReader();
 		StartCoroutine(InitializeCamera());
+		//texture = new Texture2D(128, 128);
+		//renderer = GetComponent<Renderer>();
+		//renderer.material.mainTexture = texture;
+
+		//GameObject imageFrame = GameObject.Find ("Captured Image");
+		//imageFrame.GetComponent<Sprite> ();
 	}
 
 	private IEnumerator InitializeCamera()
@@ -32,7 +42,7 @@ public class VuforiaScanner : MonoBehaviour
 		yield return new WaitForSeconds(1.25f);
 
         //var isFrameFormatSet = CameraDevice.Instance.SetFrameFormat(Image.PIXEL_FORMAT.RGB888, true);
-        var isFrameFormatSet = CameraDevice.Instance.SetFrameFormat(Image.PIXEL_FORMAT.GRAYSCALE, true);
+        var isFrameFormatSet = CameraDevice.Instance.SetFrameFormat(Vuforia.Image.PIXEL_FORMAT.GRAYSCALE, true);
         Debug.Log(String.Format("FormatSet : {0}", isFrameFormatSet));
 
 		// Force autofocus.
@@ -45,6 +55,7 @@ public class VuforiaScanner : MonoBehaviour
 		cameraInitialized = true;
         Debug.Log("cameraInitialized set to true");
 	}
+		
 
 	private void Update()
 	{
@@ -62,14 +73,25 @@ public class VuforiaScanner : MonoBehaviour
             try
             {
                 
-				var cameraFeed = CameraDevice.Instance.GetCameraImage(Image.PIXEL_FORMAT.GRAYSCALE);
-				if (cameraFeed == null)
+				var currentImage = CameraDevice.Instance.GetCameraImage(Vuforia.Image.PIXEL_FORMAT.GRAYSCALE);
+				if (currentImage == null)
 				{
                     Debug.Log("No camera device");
 					return;
 				}
                 Debug.Log("Trying to scan");
-                var data = barCodeReader.Decode(cameraFeed.Pixels, cameraFeed.BufferWidth, cameraFeed.BufferHeight, RGBLuminanceSource.BitmapFormat.Gray8);
+
+
+				two_texture = new Texture2D(128, 128, TextureFormat.Alpha8, true);
+				RawImage raw_image = GameObject.FindGameObjectWithTag("V Image").GetComponent<RawImage>();
+
+				currentImage.CopyToTexture(two_texture);
+				raw_image.texture = two_texture;
+				two_texture.Apply();
+
+				//raw_image.GetComponent<RectTransform>().sizeDelta = new Vector2(currentImage.Width, currentImage.Height);
+
+                var data = barCodeReader.Decode(currentImage.Pixels, currentImage.BufferWidth, currentImage.BufferHeight, RGBLuminanceSource.BitmapFormat.Gray8);
 				if (data != null)
 				{
 					// QRCode detected.
