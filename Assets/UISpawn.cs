@@ -25,31 +25,32 @@ public class UISpawn : MonoBehaviour {
 
     private void destroyUI()
     {
+        Debug.Log("Destroying UI");
         GameObject[] UIobjects = GameObject.FindGameObjectsWithTag("UserInterface");
         foreach(GameObject destroyee in UIobjects)
         {
             Destroy(destroyee);
         }
+        GameObject QRobjects = GameObject.FindGameObjectWithTag("QRReader");
+        Destroy(QRobjects);
     }
     public void spawnQRReader()
     {
         destroyUI();
         Instantiate(qrReader);
-        Instantiate(ARCamera);
+        //Instantiate(ARCamera);
     }
 
     public void spawnPatientUI()
     {
         destroyUI();
-        GameObject temp = Instantiate(patientUI);
-        temp.GetComponent<Canvas>().worldCamera = Hololens;
+        Instantiate(patientUI);
     }
 
     public void spawnWatsonUI()
     {
         destroyUI();
-        GameObject temp = Instantiate(watsonUI);
-        temp.GetComponent<Canvas>().worldCamera = Hololens;
+        Instantiate(watsonUI);
     }
 
     public void spawnNotepadUI()

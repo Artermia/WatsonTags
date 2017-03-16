@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-guid: bc809b6f7b43fd6448a0c409682d09d0
-timeCreated: 1487258684
+guid: f8093e1fdbfac2f449a53a96ab1d7b01
+timeCreated: 1487563457
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - patientUI: {fileID: 1635092623877340, guid: e547ccee9baab3b4b9e0acab04b81b02,
-      type: 2}
-  - watsonUI: {fileID: 1508192327268032, guid: ef3de64a75f8a1c4c91483c6fda347aa, type: 2}
-  - notepadUI: {fileID: 1098931379736804, guid: 0b37938b5d58ee24aa768d870f686bd8,
-      type: 2}
-  - alertsUI: {fileID: 1907623935809658, guid: 739150aa979a32d47b91397ceb9d4dce, type: 2}
-  - cameraUI: {fileID: 1780232451957428, guid: f421faec9f6b69846b34161c157a94de, type: 2}
-  - qrReader: {fileID: 1879841081845016, guid: e3a42364610b4fd4db1a7f4d0a566858, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
