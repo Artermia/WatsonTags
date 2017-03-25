@@ -1220,15 +1220,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635092623877340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc809b6f7b43fd6448a0c409682d09d0, type: 3}
+  m_Script: {fileID: 11500000, guid: f8093e1fdbfac2f449a53a96ab1d7b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   patientUI: {fileID: 1635092623877340}
-  watsonUI: {fileID: 1508192327268032, guid: ef3de64a75f8a1c4c91483c6fda347aa, type: 2}
-  notepadUI: {fileID: 1098931379736804, guid: 0b37938b5d58ee24aa768d870f686bd8, type: 2}
-  alertsUI: {fileID: 1907623935809658, guid: 739150aa979a32d47b91397ceb9d4dce, type: 2}
-  cameraUI: {fileID: 1780232451957428, guid: f421faec9f6b69846b34161c157a94de, type: 2}
-  qrReader: {fileID: 1879841081845016, guid: e3a42364610b4fd4db1a7f4d0a566858, type: 2}
+  watsonUI: {fileID: 1508192327268032, guid: 822963104d968a548869fb69b20e9522, type: 2}
+  notepadUI: {fileID: 1098931379736804, guid: fefae4e7b3ce1cf43b5df668964c4f77, type: 2}
+  alertsUI: {fileID: 1907623935809658, guid: b524fa3ee6a6c5a48acaca84b6551a78, type: 2}
+  cameraUI: {fileID: 1780232451957428, guid: 0ef11eb7386a45740937e41b4a2695cc, type: 2}
+  qrReader: {fileID: 1229989723428772, guid: 4808f57524cd4dc43bf55e872a1e8930, type: 2}
   ARCamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
   Hololens: {fileID: 0}
 --- !u!114 &114824084782517196

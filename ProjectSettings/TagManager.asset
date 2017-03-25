@@ -5,10 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - UserInterface
-  - AR Camera
   - Tip
-  - Vuforia Image
-  - V Image
+  - AR Camera
+  - QRReader
   layers:
   - Default
   - TransparentFX

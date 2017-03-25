@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.UI;
 
 using System;
@@ -8,32 +9,23 @@ using Vuforia;
 
 using System.Threading;
 
-using ZXing;
-using ZXing.QrCode;
-using ZXing.Common;
-
 
 [AddComponentMenu("System/VuforiaScanner")]
-public class VuforiaScanner : MonoBehaviour
-{    
-	private bool cameraInitialized;
+public class VuforiaScanner : ImageTargetAbstractBehaviour, ITrackableEventHandler
+{
+    private TrackableBehaviour mTrackableBehaviour;
+    private bool cameraInitialized;
     public UISpawn mainMenu;
     public GameObject QRcamera;
 
-	private BarcodeReader barCodeReader;
-
-	Texture2D two_texture;
-
 	void Start()
-	{        
-		barCodeReader = new BarcodeReader();
-		StartCoroutine(InitializeCamera());
-		//texture = new Texture2D(128, 128);
-		//renderer = GetComponent<Renderer>();
-		//renderer.material.mainTexture = texture;
-
-		//GameObject imageFrame = GameObject.Find ("Captured Image");
-		//imageFrame.GetComponent<Sprite> ();
+	{
+        mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+        if (mTrackableBehaviour)
+        {
+            mTrackableBehaviour.RegisterTrackableEventHandler(this);
+        }
+        StartCoroutine(InitializeCamera());
 	}
 
 	private IEnumerator InitializeCamera()
@@ -54,64 +46,30 @@ public class VuforiaScanner : MonoBehaviour
 		Debug.Log(String.Format("AutoFocus : {0}", isAutoFocus));
 		cameraInitialized = true;
         Debug.Log("cameraInitialized set to true");
-	}
-		
-
-	private void Update()
-	{
-        if (Input.GetKeyDown("k"))
+        
+    }
+    public void OnTrackableStateChanged(
+                                        TrackableBehaviour.Status previousStatus,
+                                        TrackableBehaviour.Status newStatus)
+    {
+        if (newStatus == TrackableBehaviour.Status.DETECTED ||
+            newStatus == TrackableBehaviour.Status.TRACKED ||
+            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-            mainMenu.spawnPatientUI();
-            GameObject camera = GameObject.FindGameObjectWithTag("AR Camera");
-            Destroy(camera);
-            Destroy(gameObject);
-        }
-
-		if (cameraInitialized)
-		{
-            
-            try
+            if (GameObject.FindGameObjectWithTag("QRReader") != null)
             {
-                
-				var currentImage = CameraDevice.Instance.GetCameraImage(Vuforia.Image.PIXEL_FORMAT.GRAYSCALE);
-				if (currentImage == null)
-				{
-                    Debug.Log("No camera device");
-					return;
-				}
-                Debug.Log("Trying to scan");
+                Debug.Log(this.ImageTarget.Name);
+                mainMenu.spawnPatientUI();
+            }
+        }
+        else
+        {
+            //target is lost
+        }
+    }
 
 
-				two_texture = new Texture2D(128, 128, TextureFormat.Alpha8, true);
-				RawImage raw_image = GameObject.FindGameObjectWithTag("V Image").GetComponent<RawImage>();
-
-				currentImage.CopyToTexture(two_texture);
-				raw_image.texture = two_texture;
-				two_texture.Apply();
-
-				//raw_image.GetComponent<RectTransform>().sizeDelta = new Vector2(currentImage.Width, currentImage.Height);
-
-                var data = barCodeReader.Decode(currentImage.Pixels, currentImage.BufferWidth, currentImage.BufferHeight, RGBLuminanceSource.BitmapFormat.Gray8);
-				if (data != null)
-				{
-					// QRCode detected.
-					Debug.Log(data.Text);
-                    mainMenu.spawnPatientUI();
-                    GameObject camera = GameObject.FindGameObjectWithTag("AR Camera");
-                    Destroy(camera);
-                    Destroy(gameObject);
-
-                }
-				else
-				{
-					Debug.Log("No QR code detected!");
-				}
-			}
-			catch (Exception e)
-			{
-                Debug.Log("failing to scan");
-                Debug.LogError(e.Message);
-			}
-		}
+    private void Update()
+	{
 	}
 }

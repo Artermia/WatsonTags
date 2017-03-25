@@ -1,0 +1,24 @@
+{
+  "add" : {
+    "doc" : {
+      "id" : 1,
+      "body" : "You may not have any symptoms in the early stages of melanoma. Or a melanoma may be sore, or it may itch or bleed. Most melanomas start as a new skin growth on unmarked skin. The growth may change color, shape, or size. These types of changes are an early sign that the growth is melanoma. But melanoma can also develop in an existing mole or other mark on the skin. Or it may look like a bruise that isn't healing or show up as a brown or black streak under a fingernail or toenail. Melanoma can grow anywhere on the body. It most often occurs on the upper back in men and women and on the legs in women. Less often, it can grow in other places, such as on the soles, palms, nail beds, or mucous membranes that line body cavities such as the mouth, the rectum, and the vagina. On older people, the face is the most common place for melanoma to grow. And in older men, the most common sites are the neck, scalp, and ears. Signs of melanoma The most important warning sign for melanoma is any change in size, shape, or color of a mole or other skin growth, such as a birthmark. Watch for changes that occur over a period of weeks to a month. The ABCDE system tells you what changes to look for. A is for asymmetry. One half of the mole or skin growth doesn't match the other half. B is for border irregularity. The edges are ragged, notched, or blurred. C is for color. The color is not the same throughout the mole. D is for diameter. The mole or skin growth is larger than the size of a pencil eraser. E is for evolution. There is a change in the size, shape, symptoms (such as itching or tenderness), surface (especially bleeding), or color of a mole. Melanoma in an existing mole Signs of melanoma in an existing mole include changes in: Elevation, such as thickening or raising of a previously flat mole. Surface, such as scaling, erosion, oozing, bleeding, or crusting. Surrounding skin, such as redness, swelling, or small new patches of color around a larger lesion (satellite pigmentations). Sensation, such as itching, tingling, burning, or pain. Consistency, such as softening or small pieces that break off easily.",
+      "title" : "Skin cancer, Melanoma"
+    }
+  },
+  "add" : {
+    "doc" : {
+      "id" : 2,
+      "body" : "simple shear flow past a flat plate in an incompressible fluid of small viscosity . in the study of high-speed viscous flow past a two-dimensional body it is usually necessary to consider a curved shock wave emitting from the nose or leading edge of the body .  consequently, there exists an inviscid rotational flow region between the shock wave and the boundary layer .  such a situation arises, for instance, in the study of the hypersonic viscous flow past a flat plate .  the situation is somewhat different from prandtl's classical boundary-layer problem . in prandtl's original problem the inviscid free stream outside the boundary layer is irrotational while in a hypersonic boundary-layer problem the inviscid free stream must be considered as rotational .  the possible effects of vorticity have been recently discussed by ferri and libby .  in the present paper, the simple shear flow past a flat plate in a fluid of small viscosity is investigated .  it can be shown that this problem can again be treated by the boundary-layer approximation, the only novel feature being that the free stream has a constant vorticity .  the discussion here is restricted to two-dimensional incompressible steady flow .",
+      "title" : "simple shear flow past a flat plate in an incompressible fluid of small viscosity ."
+    }
+  },
+  "add" : {
+    "doc" : {
+      "id" : 1400,
+      "body" : "the buckling shear stress of simply-supported infinitely long plates with transverse stiffeners .   this report is an extension of previous theoretical investigations of the elastic buckling in shear of flat plates reinforced by transverse stiffeners . the plates are treated as infinitely long and simply-supported along the long sides . stiffeners are spaced at regular intervals, dividing the plate into a number of panels of uniform size . the effect ob bending and torsional stiffnesses of the stiffener upon the buckling shear stress is calculated for the complete range of stiffnesses, for panels with ratios of width to stiffener spacing of graphical forms .",
+      "title" : "the buckling shear stress of simply-supported infinitely long plates with transverse stiffeners ."
+    }
+  },
+  "commit" : { }
+}
