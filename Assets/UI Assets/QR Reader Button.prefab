@@ -133,8 +133,8 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 0.001
   mHeight: 0.001
-  mainMenu: {fileID: 114792518404854364, guid: b4779fc1977b443489941e5077792803, type: 2}
-  QRcamera: {fileID: 0}
+  mainMenu: {fileID: 0}
+  QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
 --- !u!114 &114046570675432142
 MonoBehaviour:
   m_ObjectHideFlags: 1
