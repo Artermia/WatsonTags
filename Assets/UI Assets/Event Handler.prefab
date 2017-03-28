@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4191684319494162}
   - component: {fileID: 114171680797555306}
   - component: {fileID: 114775942573696482}
-  - component: {fileID: 114815119644542058}
   m_Layer: 0
   m_Name: Event Handler
   m_TagString: Untagged
@@ -76,14 +75,3 @@ MonoBehaviour:
   sampleAlert: {fileID: 1213960100516370, guid: a69d477df8d04444ab4858b336180f07,
     type: 2}
   popupUI: {fileID: 1179969217018054, guid: eda55d77b5209d5448e573f70482471b, type: 2}
---- !u!114 &114815119644542058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1006125429048406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7888d551a65e4976a8815239792e677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -1212,9 +1212,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114815119644542058, guid: 6c21708a32037504aa4069545931c644,
+      - m_Target: {fileID: 114480665696092304, guid: 76c4a642d926a7342a6d33f202fd2f69,
           type: 2}
-        m_MethodName: search
+        m_MethodName: startSearch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

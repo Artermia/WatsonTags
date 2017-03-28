@@ -11,6 +11,8 @@ TagManager:
   - Reminder
   - CurrentAlerts
   - Popup
+  - Watson
+  - WatsonHandler
   layers:
   - Default
   - TransparentFX
