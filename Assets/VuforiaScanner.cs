@@ -1,4 +1,5 @@
 ﻿
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -59,6 +60,7 @@ public class VuforiaScanner : ImageTargetAbstractBehaviour, ITrackableEventHandl
             if (GameObject.FindGameObjectWithTag("QRReader") != null)
             {
                 Debug.Log(this.ImageTarget.Name);
+                mainMenu.setID(this.ImageTarget.Name);
                 mainMenu.spawnPatientUI();
             }
         }

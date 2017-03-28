@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1006125429048406}
+  m_IsPrefabParent: 1
+--- !u!1 &1006125429048406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4191684319494162}
+  - component: {fileID: 114171680797555306}
+  - component: {fileID: 114775942573696482}
+  - component: {fileID: 114815119644542058}
+  m_Layer: 0
+  m_Name: Event Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4191684319494162
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: -0.25, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114171680797555306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8093e1fdbfac2f449a53a96ab1d7b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientUI: {fileID: 1635092623877340, guid: b4779fc1977b443489941e5077792803, type: 2}
+  watsonUI: {fileID: 1508192327268032, guid: 822963104d968a548869fb69b20e9522, type: 2}
+  notepadUI: {fileID: 1098931379736804, guid: fefae4e7b3ce1cf43b5df668964c4f77, type: 2}
+  alertsUI: {fileID: 1907623935809658, guid: b524fa3ee6a6c5a48acaca84b6551a78, type: 2}
+  newAlert: {fileID: 1494497117083622, guid: a7f547281db0f8f42b89e0489aadf05a, type: 2}
+  cameraUI: {fileID: 1780232451957428, guid: 0ef11eb7386a45740937e41b4a2695cc, type: 2}
+  qrReader: {fileID: 1965899061894136, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
+  ARCamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+  Hololens: {fileID: 20000013304850028, guid: d379ed0a5618c9f479f58bd83a2d0ad3, type: 2}
+--- !u!114 &114775942573696482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f236ada7cc44bc47be2ff56ec6a329a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleAlert: {fileID: 1213960100516370, guid: a69d477df8d04444ab4858b336180f07,
+    type: 2}
+  popupUI: {fileID: 1179969217018054, guid: eda55d77b5209d5448e573f70482471b, type: 2}
+--- !u!114 &114815119644542058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7888d551a65e4976a8815239792e677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

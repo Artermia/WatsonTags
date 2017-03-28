@@ -8,6 +8,9 @@ TagManager:
   - Tip
   - AR Camera
   - QRReader
+  - Reminder
+  - CurrentAlerts
+  - Popup
   layers:
   - Default
   - TransparentFX

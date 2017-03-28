@@ -1,0 +1,10 @@
+<Patients>
+  <Patient>
+	  <ID>564813</ID>
+	  <Name>Bob Smith</Name>
+	  <Age>37</Age>
+	  <DOB>4/29/1980</DOB>
+	  <Sex>Male</Sex>
+	  <Room>306</Room>
+  </Patient>
+</Patients>
