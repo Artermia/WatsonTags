@@ -914,7 +914,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114171680797555306, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
         m_MethodName: spawnQRReader
         m_Mode: 1
         m_Arguments:

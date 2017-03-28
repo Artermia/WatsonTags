@@ -259,7 +259,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 564813Material
+  m_Name: 430215Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -422,7 +422,7 @@ Prefab:
         type: 2}
       propertyPath: mainMenu
       value: 
-      objectReference: {fileID: 617790714}
+      objectReference: {fileID: 0}
     - target: {fileID: 23422426345251858, guid: df36b37d07cf2514584bb1751226ec04,
         type: 2}
       propertyPath: m_Materials.Array.data[0]

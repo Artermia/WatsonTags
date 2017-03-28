@@ -18,7 +18,7 @@ public class UISpawn : MonoBehaviour {
     public GameObject ARCamera;
     public Camera Hololens;
 
-    private string ID;
+    static private string ID;
 
     GestureRecognizer recognizer;
 
