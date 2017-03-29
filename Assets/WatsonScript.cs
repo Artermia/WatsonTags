@@ -29,8 +29,28 @@ public class WatsonScript : MonoBehaviour {
     public void search()
     {
 
-        string url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
+        GameObject[] inputs = GameObject.FindGameObjectsWithTag("WatsonInput");
+        string symptoms = "symptoms";
+        bool default_input = true;
+        foreach(GameObject input in inputs)
+        {
+            if(input.GetComponent<Dropdown>().value != 0)
+            {
+                default_input = false;
+                symptoms += "%20" + input.GetComponent<Dropdown>().options[input.GetComponent<Dropdown>().value].text;
+            }
+        }
 
+        string url;
+        if (default_input)
+        {
+            url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
+        }
+        else
+        {
+            url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=" + symptoms + "&wt=text";
+            Debug.Log("URL: " + url);
+        }
         WWW www = new WWW(url);
         StartCoroutine(WaitForRequest(www));
     }
@@ -58,9 +78,9 @@ public class WatsonScript : MonoBehaviour {
 
         reader.ReadToFollowing("arr");
         reader.ReadToDescendant("str");
-        string title = reader.ReadString();
-        reader.ReadToNextSibling("str");
-        string text = reader.ReadString();
+        string title = reader.ReadElementContentAsString();
+        //reader.ReadToNextSibling("str");
+        string text = reader.ReadElementContentAsString();
 
         Debug.Log("Title: " + title);
         Debug.Log("Text: " + text);

@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 114467684307145056}
   m_Layer: 5
   m_Name: Input2
-  m_TagString: Untagged
+  m_TagString: WatsonInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 114290947994218158}
   m_Layer: 5
   m_Name: Input1
-  m_TagString: Untagged
+  m_TagString: WatsonInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 114448315239179658}
   m_Layer: 5
   m_Name: Input3
-  m_TagString: Untagged
+  m_TagString: WatsonInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2242,7 +2242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Submit
 --- !u!114 &114519724540542832
 MonoBehaviour:
   m_ObjectHideFlags: 1

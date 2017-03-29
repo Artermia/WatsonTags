@@ -13,6 +13,7 @@ TagManager:
   - Popup
   - Watson
   - WatsonHandler
+  - WatsonInput
   layers:
   - Default
   - TransparentFX

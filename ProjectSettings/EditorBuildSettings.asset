@@ -5,7 +5,5 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/User Interface.unity
   - enabled: 1
     path: Assets/UI Assets/User Interface.unity
