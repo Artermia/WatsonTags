@@ -18,6 +18,8 @@ public class UISpawn : MonoBehaviour {
     public GameObject ARCamera;
     public Camera Hololens;
 
+    static private bool centering = false;
+
     static private string ID;
 
     GestureRecognizer recognizer;
@@ -34,9 +36,11 @@ public class UISpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         recognizer = new GestureRecognizer();
-        recognizer.TappedEvent += Recognizer_TappedEvent;
+        recognizer.SetRecognizableGestures(GestureSettings.Hold);
+        recognizer.HoldStartedEvent += Recognizer_HoldStartedEvent;
+        recognizer.HoldCompletedEvent += Recognizer_HoldCompletedEvent;
         recognizer.StartCapturingGestures();
-
+        
     }
 	
 	// Update is called once per frame
@@ -46,9 +50,23 @@ public class UISpawn : MonoBehaviour {
             Debug.Log("Centering UI");
             centerUI();
         }
+        if (centering)
+        {
+            centerUI();
+        }
 	}
 
-    private void Recognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    private void Recognizer_HoldCompletedEvent(InteractionSourceKind source, Ray ray)
+    {
+        centering = false;
+    }
+
+    private void Recognizer_HoldStartedEvent(InteractionSourceKind source, Ray ray)
+    {
+        centering = true;
+    }
+
+    /*private void Recognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
     {
         Debug.Log("tapped: " + tapCount);
         if(tapCount >= 2)
@@ -57,7 +75,7 @@ public class UISpawn : MonoBehaviour {
         }
         // process the event.
 
-    }
+    }*/
 
     public void setID(string input)
     {
