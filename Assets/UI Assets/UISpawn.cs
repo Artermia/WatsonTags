@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR.WSA.Input;
+#if WINDOWS_UWP
+using Windows.Storage;
+using System.IO;
+using System.Threading.Tasks;
+using Windows.Data.Xml.Dom;
+#endif
+using System;
 using System.Xml;
 using System.Xml.Linq;
 using UnityEngine.UI;
@@ -19,7 +26,8 @@ public class UISpawn : MonoBehaviour {
     public Camera Hololens;
 
     static private bool centering = false;
-
+    private bool loadedFiles = false;
+    static private string patientInfos;
     static private string ID;
 
     GestureRecognizer recognizer;
@@ -86,7 +94,24 @@ public class UISpawn : MonoBehaviour {
     private patientInfo readXML(string ID)
     {
         patientInfo patient = new patientInfo();
+#if WINDOWS_UWP
+        if (!loadedFiles){
+            Task task = new Task(
+            async () =>
+            {
+            var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Patients/PatientInfo.xml"));
+            Windows.Data.Xml.Dom.XmlDocument xdoc = await Windows.Data.Xml.Dom.XmlDocument.LoadFromFileAsync(xmlFile);
+            patientInfos = xdoc.GetXml();
+            });
+            task.Start();
+            task.Wait();
+            loadedFiles = true;
+        }
+        XmlReader reader = XmlReader.Create(new StringReader(patientInfos));
+#endif
+#if UNITY_EDITOR
         XmlReader reader = XmlReader.Create("Assets/UI Assets/Patients/PatientInfo.xml");
+#endif
         while (reader.ReadToFollowing("Patient"))
         {
             XmlReader innerReader = reader.ReadSubtree();
