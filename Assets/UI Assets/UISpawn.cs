@@ -31,6 +31,7 @@ public class UISpawn : MonoBehaviour {
         public string DOB { get; set; }
         public string SEX { get; set; }
         public string ROOM { get; set; }
+        public string NOTES { get; set; }
     }
 
 	// Use this for initialization
@@ -104,6 +105,8 @@ public class UISpawn : MonoBehaviour {
                     patient.SEX = innerReader.ReadElementContentAsString();
                     innerReader.ReadToFollowing("Room");
                     patient.ROOM = innerReader.ReadElementContentAsString();
+                    innerReader.ReadToFollowing("Notes");
+                    patient.NOTES = innerReader.ReadElementContentAsString();
                     return patient;
                 }
                 else
@@ -185,6 +188,12 @@ public class UISpawn : MonoBehaviour {
         UIobject.transform.rotation = location.rotation;
         Transform headerBar = UIobject.transform.FindChild("Header Bar");
         updateHeader(ref headerBar, ID);
+
+        Transform textBox = UIobject.transform.FindChild("Text");
+        patientInfo patient = readXML(ID);
+        textBox.GetComponent<Text>().text = patient.NOTES;
+
+
     }
 
     public void spawnAlertsUI()

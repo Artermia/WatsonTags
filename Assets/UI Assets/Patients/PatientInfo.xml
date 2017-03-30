@@ -6,6 +6,10 @@
 		<DOB>4/29/1980</DOB>
 		<Sex>Male</Sex>
 		<Room>306</Room>
+    <Notes>
+      Benign Prostatic Hyperplasia S/P TUMT 2/22/17; Prostate Volume 50grams. He is currently on Alfuzosin 10mg QD and Cialis 5mg QD.
+      Immediately following procedure pt noticed improvement in urine stream and bladder emptying. Two months after TUMT symptoms of nocturia q3hours, variable stream and incomplete bladder emptying returned.
+    </Notes>
 	</Patient>
 		<Patient>
 		<ID>430215</ID>
@@ -14,6 +18,10 @@
 		<DOB>12/9/1990</DOB>
 		<Sex>Female</Sex>
 		<Room>203</Room>
+    <Notes>
+      1/13/17: IPSS 28, BVI 227cc, UA clear except for glucose(Pt is a diabetic).
+      Cystoscopy today(1/13/17) under local anesthesia and sterile technique: Urethra within normal limits, 60g prostate with moderate middle lobe component, significant bladder trabeculation. Rx Cipro 500mg 3 days given.
+    </Notes>
 	</Patient>
 	<Patient>
 		<ID>205810</ID>
@@ -22,5 +30,8 @@
 		<DOB>6/14/1965</DOB>
 		<Sex>Male</Sex>
 		<Room>307</Room>
+    <Notes>Prostate Cancer See initial consult on 3/16/16. Pt dx 6 yrs ago and under the care of Dr. SXXXXX of UCLA 310 xxx-xxxx. 
+    Original BX was 2010 and f/u bx was 2011 and more recently 1 year ago due to blip of PSA from 8 range to 12 range. Dr. xxxxx has advised continued active surveillance and has had no objection to the patient being on testosterone therapy. No pathology in our chart but patient states original was Gl 6 low grade. DRE by Dr. xxxxx recently apparently unremarkable. 
+    Bx one year ago per patient - no cancer. 4K score per Dr. xxxxxx phone conversation shows 30% chance of more aggressive disease beyond Gl 6.</Notes>
 	</Patient>
 </Patients>

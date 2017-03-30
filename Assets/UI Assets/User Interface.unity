@@ -430,7 +430,7 @@ Prefab:
       objectReference: {fileID: 783079002}
     - target: {fileID: 1965899061894136, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
@@ -954,6 +954,39 @@ MonoBehaviour:
   mHeight: 0.1
   mainMenu: {fileID: 617790714}
   QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+--- !u!1 &1507477222 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1006125429048406, guid: 6c21708a32037504aa4069545931c644,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527288160}
+--- !u!114 &1507477223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507477222}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e5f98320fb38641976f7146f05256a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1507477224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507477222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1a2a33ffcac354298137001635a001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxGazeCollisionDistance: 10
+  RaycastLayerMasks:
+  - serializedVersion: 2
+    m_Bits: 4294967291
+  Stabilizer: {fileID: 0}
+  GazeTransform: {fileID: 0}
 --- !u!1001 &1527288160
 Prefab:
   m_ObjectHideFlags: 0
