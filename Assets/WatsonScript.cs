@@ -8,18 +8,15 @@ using UnityEngine.Networking;
 
 public class WatsonScript : MonoBehaviour {
 
+    //variable holding the Watson response
     static string data;
+    
+    //Unused
+    void Start() { }
+    void Update() { }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    //Starts on Submit on the Watson UI button
+    //Calls search
     public void startSearch()
     {
         //BroadcastMessage("search");
@@ -27,9 +24,11 @@ public class WatsonScript : MonoBehaviour {
         watsonHandler.GetComponent<WatsonScript>().search();
     }
 
+    //Called by startSearch()
+    //Takes symptoms from Watson Inputs and places it in the url to request
+    //Creates a UnityWebRequest with the url and calls the async function to return Watson's data
     public void search()
     {
-
         GameObject[] inputs = GameObject.FindGameObjectsWithTag("WatsonInput");
         string symptoms = "symptoms";
         bool default_input = true;
@@ -56,27 +55,30 @@ public class WatsonScript : MonoBehaviour {
         StartCoroutine(WaitForRequest(request));
     }
 
+    //Called by search()
+    //Async function for the GET request to Watson
+    //Stores the result in data variable
     IEnumerator WaitForRequest(UnityWebRequest request)
     {
         yield return request.Send();
         if (request.isError)
         {
-            Debug.Log("WWW error: " + request.error);
+            Debug.Log("UnityWebRequest error: " + request.error);
         }
         else
         {
             data = request.downloadHandler.text;
-            Debug.Log("WWW ok!: " + request.downloadHandler.text);
+            Debug.Log("UnityWebRequest ok!: " + request.downloadHandler.text);
             displayData();
         }
     }
 
+    //Function for parsing Watson responses and displaying it on the screen
+    //Parses the Watson XML response into the title and text
     void displayData()
     {
         Stream s = GenerateStreamFromString(data);
-
         XmlReader reader = XmlReader.Create(s);
-
         reader.ReadToFollowing("arr");
         reader.ReadToDescendant("str");
         string title = reader.ReadElementContentAsString();
@@ -92,6 +94,7 @@ public class WatsonScript : MonoBehaviour {
 
     }
 
+    //Function to create a string from a string for use in XmlReader
     public static Stream GenerateStreamFromString(string s)
     {
         MemoryStream stream = new System.IO.MemoryStream();
@@ -100,7 +103,5 @@ public class WatsonScript : MonoBehaviour {
         writer.Flush();
         stream.Position = 0;
         return stream;
-
     }
-
 }
