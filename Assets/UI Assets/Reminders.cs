@@ -182,4 +182,10 @@ public class Reminders : MonoBehaviour {
             newAlert.transform.localScale = new Vector3(1, 1, 1);
         }
     }
+
+    public void clearAll()
+    {
+        alerts = new List<Reminder>();
+        displayReminders();
+    }
 }
