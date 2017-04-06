@@ -1,3 +1,4 @@
+C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\Patients\PatientInfo.xml
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\Watson Tags UI.exe
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\Watson Tags UI.pdb
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\resources.pri
@@ -142,6 +143,7 @@ C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Rele
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\UnityEngineDelegates.dll
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\UnityEngineDelegates.pdb
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\UnityEngineProxy.pdb
+C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\Watson Tags UI.csprojResolveAssemblyReference.cache
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\Watson Tags UI.exe
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\Watson Tags UI.pdb
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\ResourceHandlingTask.state
@@ -210,5 +212,3 @@ C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Rele
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\qualifiers.txt.intermediate
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt
 C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\ProjectArchitectures.txt
-C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\bin\x86\Release\Patients\PatientInfo.xml
-C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\obj\x86\Release\Watson Tags UI.csprojResolveAssemblyReference.cache
