@@ -34,3 +34,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Other stuff in our build
+/QCAR/
+/UWP/
+/App/
