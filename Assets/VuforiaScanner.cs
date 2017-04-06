@@ -5,6 +5,7 @@ using System.Collections;
 using Vuforia;
 using System.Threading;
 
+//Handles the QR Reader via image targets through Vuforia
 [AddComponentMenu("System/VuforiaScanner")]
 public class VuforiaScanner : ImageTargetAbstractBehaviour, ITrackableEventHandler
 {
@@ -21,6 +22,8 @@ public class VuforiaScanner : ImageTargetAbstractBehaviour, ITrackableEventHandl
         }
 	}
 
+    //Finds image targets and tracks their states
+    //If the QRReader object exists, set the ID to the QR code of an image target and spawn the patient UI
     public void OnTrackableStateChanged(
                                         TrackableBehaviour.Status previousStatus,
                                         TrackableBehaviour.Status newStatus)
