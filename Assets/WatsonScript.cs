@@ -44,7 +44,8 @@ public class WatsonScript : MonoBehaviour {
         string url;
         if (default_input)
         {
-            url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
+            //url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
+            url = "https://www.google.com/";
         }
         else
         {
