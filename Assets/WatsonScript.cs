@@ -4,6 +4,7 @@ using System.IO;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class WatsonScript : MonoBehaviour {
 
@@ -44,30 +45,29 @@ public class WatsonScript : MonoBehaviour {
         string url;
         if (default_input)
         {
-            //url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
-            url = "https://www.google.com/";
+            url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=what%20is%20th%20%20treatment%20for%20blood%20clot?&wt=text";
         }
         else
         {
             url = "https://eb3c57ce-b1fe-4137-b396-76d814189820:kcP3GMJwJ86E@gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/scf6b5474f_5fb7_46b1_bf67_54bb30677ab3/solr/demo-collection/select?q=" + symptoms + "&wt=text";
             Debug.Log("URL: " + url);
         }
-        WWW www = new WWW(url);
-        StartCoroutine(WaitForRequest(www));
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        StartCoroutine(WaitForRequest(request));
     }
 
-    IEnumerator WaitForRequest(WWW www)
+    IEnumerator WaitForRequest(UnityWebRequest request)
     {
-        yield return www;
-        if (www.error == null)
+        yield return request.Send();
+        if (request.isError)
         {
-            data = www.text;
-            Debug.Log("WWW ok!: " + www.text);
-            displayData();
+            Debug.Log("WWW error: " + request.error);
         }
         else
         {
-            Debug.Log("WWW error: " + www.error);
+            data = request.downloadHandler.text;
+            Debug.Log("WWW ok!: " + request.downloadHandler.text);
+            displayData();
         }
     }
 
