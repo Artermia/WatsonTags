@@ -10,6 +10,7 @@ public class Reminders : MonoBehaviour {
 
     public GameObject sampleAlert;
     public GameObject popupUI;
+    private TouchScreenKeyboard keyboard;
 
     public class Reminder
     {
@@ -100,6 +101,7 @@ public class Reminders : MonoBehaviour {
         popup.transform.FindChild("Message").GetComponent<Text>().text = input.message;
         popup.transform.position = user.transform.position + user.transform.forward * 2;
         popup.transform.rotation = user.transform.rotation;
+
     }
 
     public void addHour()

@@ -25,6 +25,8 @@ public class UISpawn : MonoBehaviour {
     public GameObject ARCamera;
     public Camera Hololens;
 
+    static private TouchScreenKeyboard keyboard;
+
     static private bool centering = false;
     private bool loadedFiles = false;
     static private string patientInfos;
@@ -49,7 +51,7 @@ public class UISpawn : MonoBehaviour {
         recognizer.HoldStartedEvent += Recognizer_HoldStartedEvent;
         recognizer.HoldCompletedEvent += Recognizer_HoldCompletedEvent;
         recognizer.StartCapturingGestures();
-        
+        keyboard = TouchScreenKeyboard.Open("");
     }
 	
 	// Update is called once per frame
@@ -238,6 +240,10 @@ public class UISpawn : MonoBehaviour {
         GameObject UIobject = Instantiate(newAlert);
         UIobject.transform.position = location.position;
         UIobject.transform.rotation = location.rotation;
+
+
+        keyboard.active = true;
+        Debug.Log("Keyboard " + TouchScreenKeyboard.visible);
     }
 
     public void spawnCameraUI()
