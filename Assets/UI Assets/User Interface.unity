@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872692, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -252,7 +252,6 @@ MonoBehaviour:
   mWidth: 0.1
   mHeight: 0.1
   mainMenu: {fileID: 617790714}
-  QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
 --- !u!21 &185033752
 Material:
   serializedVersion: 6
@@ -633,7 +632,6 @@ MonoBehaviour:
   mWidth: 0.1
   mHeight: 0.1
   mainMenu: {fileID: 617790714}
-  QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
 --- !u!4 &958096018 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010560871102, guid: d379ed0a5618c9f479f58bd83a2d0ad3,
@@ -953,7 +951,6 @@ MonoBehaviour:
   mWidth: 0.1
   mHeight: 0.1
   mainMenu: {fileID: 617790714}
-  QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
 --- !u!1 &1507477222 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1006125429048406, guid: 6c21708a32037504aa4069545931c644,
@@ -976,7 +973,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507477222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d1a2a33ffcac354298137001635a001, type: 3}
   m_Name: 
