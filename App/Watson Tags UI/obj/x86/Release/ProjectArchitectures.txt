@@ -1,1 +1,0 @@
-C:\Users\David\Desktop\EECS 481\Hololens Test v2\App\Watson Tags UI\Watson Tags UI.csproj;x86
