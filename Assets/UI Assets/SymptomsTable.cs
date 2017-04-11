@@ -73,6 +73,10 @@ public class SymptomsTable : MonoBehaviour {
         GameObject popupBox = Instantiate(popup);
         popupBox.transform.FindChild("Message").GetComponent<Text>().text = (string)symptoms[input];
         popupBox.transform.FindChild("Message").GetComponent<Text>().resizeTextForBestFit = true;
+
+        GameObject user = GameObject.Find("HoloLensCamera");
+        popupBox.transform.position = user.transform.position + user.transform.forward * 2;
+        popupBox.transform.rotation = user.transform.rotation;
     }
 }
 

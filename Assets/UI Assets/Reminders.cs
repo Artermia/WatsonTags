@@ -57,8 +57,11 @@ public class Reminders : MonoBehaviour {
         {
             GameObject reminderUI = GameObject.FindGameObjectWithTag("Reminder");
             GameObject keyboard = GameObject.FindGameObjectWithTag("Keyboard");
-            reminderUI.transform.FindChild("Message").FindChild("Text").GetComponent<Text>().text = keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text;
-            Debug.Log(keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text);
+            if (keyboard != null)
+            {
+                reminderUI.transform.FindChild("Message").FindChild("Text").GetComponent<Text>().text = keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text;
+                Debug.Log(keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text);
+            }
         }
         
     }
@@ -89,7 +92,11 @@ public class Reminders : MonoBehaviour {
         Debug.Log("Seconds remaining: " + secRemaining);
         alerts.Add(newReminder);
         Debug.Log(alerts.Count);
-        GameObject.FindGameObjectWithTag("Keyboard").SetActive(false);
+        GameObject keyboard = GameObject.FindGameObjectWithTag("Keyboard");
+        if (keyboard != null)
+        {
+            keyboard.SetActive(false);
+        }
         creatingAlert = false;
         Destroy(reminderUI);
     }
@@ -168,7 +175,10 @@ public class Reminders : MonoBehaviour {
     public void destroyReminder()
     {
         GameObject reminderUI = GameObject.FindGameObjectWithTag("Reminder");
-        GameObject.FindGameObjectWithTag("Keyboard").SetActive(false);
+        GameObject keyboard = GameObject.FindGameObjectWithTag("Keyboard");
+        if (keyboard != null) {
+            keyboard.SetActive(false);
+        }
         creatingAlert = false;
         Destroy(reminderUI);
     }
