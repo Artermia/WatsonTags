@@ -417,20 +417,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 33425617358639854, guid: df36b37d07cf2514584bb1751226ec04,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 32631203}
     - target: {fileID: 23422426345251858, guid: df36b37d07cf2514584bb1751226ec04,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 783079002}
-    - target: {fileID: 1965899061894136, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 33425617358639854, guid: df36b37d07cf2514584bb1751226ec04,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 32631203}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
   m_IsPrefabParent: 0
