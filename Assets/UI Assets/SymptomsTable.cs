@@ -1,14 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SymptomsTable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {}
-
-	// Update is called once per frame
-	void Update () {}
+    public GameObject popup;
 
 	public class Symptom
 	{
@@ -25,10 +22,23 @@ public class SymptomsTable : MonoBehaviour {
 		}
 	}
 		
-	Hashtable symptoms = new Hashtable();
+	static Hashtable symptoms = new Hashtable();
 
-	//Appendix Ctor
-	public SymptomsTable() {
+    // Use this for initialization
+    void Start()
+    {
+        //Create list of symptoms.
+        //SymptomsTable appendix = new SymptomsTable();
+        loadSymptoms();
+        //Retrieve table
+        //Debug.Log(appendix.symptoms);
+    }
+
+    // Update is called once per frame
+    void Update() { }
+
+    //Appendix Ctor
+    public void loadSymptoms() {
 
 		//changed from coughing
 		symptoms ["Cough"] = "A rapid expulsion of air from the lungs, typically in order to clear the lung airways of fluids, mucus, or other material. Also known as tussis.";
@@ -36,15 +46,15 @@ public class SymptomsTable : MonoBehaviour {
 		symptoms ["Internal Bleeding"] = "Bleeding inside the body that is not seen from the outside. Internal bleeding occurs when damage to an artery or vein allows blood to escape the circulatory system and collect inside the body. The internal bleeding may occur within tissues, organs, or in cavities of the body including the head, chest, and abdomen.";
 		symptoms ["Fatigue"] = "A condition characterized by a lessened capacity for work and reduced efficiency of accomplishment, usually accompanied by a feeling of weariness and tiredness. Fatigue can be acute and come on suddenly or chronic and persist.";
 		symptoms ["Nausea"] = "Stomach queasiness, the urge to vomit.";
-		symptoms ["Sweating"] = "The act of secreting fluid from the skin by the sweat (sudoriferous) glands. These are small tubular glands situated within and under the skin (in the subcutaneous tissue). They discharge by tiny openings in the surface of the skin.\n\nThe sweat is a transparent colorless acidic fluid with a peculiar odor. It contains some fatty acids and mineral matter. It is also called perspiration.";
-		symptoms ["Headache"] = "A pain in the head with the pain being above the eyes or the ears, behind the head (occipital), or in the back of the upper neck. Headache, like chest pain or back ache, has many causes.\n\nAll headaches are considered primary headaches or secondary headaches. Primary headaches are not associated with other diseases. Examples of primary headaches are migraine headaches, tension headaches, and cluster headaches. Secondary headaches are caused by other diseases. The associated disease may be minor or major.";
+		symptoms ["Sweating"] = "The act of secreting fluid from the skin by the sweat (sudoriferous) glands. These are small tubular glands situated within and under the skin (in the subcutaneous tissue). They discharge by tiny openings in the surface of the skin.";
+		symptoms ["Headache"] = "A pain in the head with the pain being above the eyes or the ears, behind the head (occipital), or in the back of the upper neck. Headache, like chest pain or back ache, has many causes.";
 		symptoms ["Diarrhea"] = "A common condition that involves unusually frequent and liquid bowel movements. The opposite of constipation. There are many infectious and noninfectious causes of diarrhea.";
 
 		//changed from stiff
 		symptoms ["Stiff neck"] = "Also called torticollis or spasmodic torticollis, this is the most common of the focal dystonias: a state of abnormal -- either excessive of inadequate -- muscle tone."; 
 
 		//this is a diagnosis
-		symptoms ["Broken Bone"] = "";
+		symptoms ["Irritable"] = "Restless or more cranky than usual.";
 
 		symptoms["Arm Pain"] = "Brachial neuritis: Inflammation of nerves in the arm causing muscle weakness and pain.";
 		symptoms["Cramping Leg Pain"] = "An aching, crampy, tired, and sometimes burning pain in the legs that comes and goes; it typically occurs with walking and goes away with rest. Known medically as intermittent claudication.";
@@ -53,12 +63,16 @@ public class SymptomsTable : MonoBehaviour {
 		symptoms["Discoloration"] = "Erythrocyanosis: Discoloration on the legs that has a bluish or purple hue.";
 	}
 
-	public static void Main(string[] args) {
-		//Create list of symptoms.
-		SymptomsTable appendix = new SymptomsTable();
-
-		//Retrieve table
-		Debug.Log(appendix.symptoms);
-	}
+    public void spawnSymptom(string input)
+    {
+        //Prevent multiple popups
+        if(GameObject.FindGameObjectWithTag("Popup") != null)
+        {
+            return;
+        }
+        GameObject popupBox = Instantiate(popup);
+        popupBox.transform.FindChild("Message").GetComponent<Text>().text = (string)symptoms[input];
+        popupBox.transform.FindChild("Message").GetComponent<Text>().resizeTextForBestFit = true;
+    }
 }
 

@@ -24,8 +24,7 @@ public class UISpawn : MonoBehaviour {
     public GameObject qrReader;
     public GameObject ARCamera;
     public Camera Hololens;
-
-    static private TouchScreenKeyboard keyboard;
+    public GameObject keyboard;
 
     static private bool centering = false;
     private bool loadedFiles = false;
@@ -51,7 +50,6 @@ public class UISpawn : MonoBehaviour {
         recognizer.HoldStartedEvent += Recognizer_HoldStartedEvent;
         recognizer.HoldCompletedEvent += Recognizer_HoldCompletedEvent;
         recognizer.StartCapturingGestures();
-        keyboard = TouchScreenKeyboard.Open("");
     }
 	
 	// Update is called once per frame
@@ -241,9 +239,17 @@ public class UISpawn : MonoBehaviour {
         UIobject.transform.position = location.position;
         UIobject.transform.rotation = location.rotation;
 
+        
+    }
 
-        keyboard.active = true;
-        Debug.Log("Keyboard " + TouchScreenKeyboard.visible);
+    public void spawnKeyboard()
+    {
+        Transform location = GameObject.FindGameObjectWithTag("UserInterface").transform;
+        GameObject inputDevice = Instantiate(keyboard);
+        inputDevice.transform.position = location.position;
+        inputDevice.transform.rotation = location.rotation;
+        inputDevice.GetComponent<Canvas>().sortingOrder = 10;
+        inputDevice.SetActive(true);
     }
 
     public void spawnCameraUI()

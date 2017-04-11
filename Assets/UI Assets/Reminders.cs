@@ -9,8 +9,10 @@ public class Reminders : MonoBehaviour {
     static List<Reminder> alerts = new List<Reminder>();
 
     public GameObject sampleAlert;
+    public GameObject newAlert;
     public GameObject popupUI;
-    private TouchScreenKeyboard keyboard;
+
+    static private bool creatingAlert = false;
 
     public class Reminder
     {
@@ -50,20 +52,17 @@ public class Reminders : MonoBehaviour {
         {
             alerts.Remove(toDelete);
         }
-        /*foreach (Reminder alert in alerts)
+
+        if (creatingAlert)
         {
-            alert.timeRemaining -= Time.deltaTime;
-            //Debug.Log("time remaining: " + alert.timeRemaining);
-            if (alert.timeRemaining <= 0)
-            {
-                Debug.Log("Reminder:" + alert.message);
-                spawnPopup(alert);
-                alerts.Remove(alert);
-            }
-        }*/
+            GameObject reminderUI = GameObject.FindGameObjectWithTag("Reminder");
+            GameObject keyboard = GameObject.FindGameObjectWithTag("Keyboard");
+            reminderUI.transform.FindChild("Message").FindChild("Text").GetComponent<Text>().text = keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text;
+            Debug.Log(keyboard.transform.FindChild("keyboard_Background").FindChild("search").FindChild("InputField").FindChild("Text").GetComponent<Text>().text);
+        }
+        
     }
 
-    //public void addReminder(string message, string hour, string minute)
     public void addReminder()
     {
         Reminder newReminder = new Reminder();
@@ -90,7 +89,8 @@ public class Reminders : MonoBehaviour {
         Debug.Log("Seconds remaining: " + secRemaining);
         alerts.Add(newReminder);
         Debug.Log(alerts.Count);
-
+        GameObject.FindGameObjectWithTag("Keyboard").SetActive(false);
+        creatingAlert = false;
         Destroy(reminderUI);
     }
 
@@ -104,6 +104,19 @@ public class Reminders : MonoBehaviour {
 
     }
 
+    public void spawnNewAlert()
+    {
+        if (creatingAlert)
+        {
+            return;
+        }
+        Transform location = GameObject.FindGameObjectWithTag("UserInterface").transform;
+        GameObject UIobject = Instantiate(newAlert);
+        UIobject.transform.position = location.position;
+        UIobject.transform.rotation = location.rotation;
+        creatingAlert = true;
+
+    }
     public void addHour()
     {
         string value = this.transform.FindChild("Hour").GetComponent<Text>().text;
@@ -155,6 +168,8 @@ public class Reminders : MonoBehaviour {
     public void destroyReminder()
     {
         GameObject reminderUI = GameObject.FindGameObjectWithTag("Reminder");
+        GameObject.FindGameObjectWithTag("Keyboard").SetActive(false);
+        creatingAlert = false;
         Destroy(reminderUI);
     }
 

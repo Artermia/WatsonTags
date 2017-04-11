@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4191684319494162}
   - component: {fileID: 114171680797555306}
   - component: {fileID: 114775942573696482}
+  - component: {fileID: 114541056858893154}
+  - component: {fileID: 114033402698641038}
+  - component: {fileID: 114931936540512558}
   m_Layer: 0
   m_Name: Event Handler
   m_TagString: Untagged
@@ -41,6 +44,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114033402698641038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2795b3e072e1745a4f8c670d64284f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecognizerStart: 0
+  KeywordsAndResponses:
+  - Keyword: Center
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171680797555306}
+          m_MethodName: centerUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Main Menu
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171680797555306}
+          m_MethodName: spawnPatientUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Watson
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171680797555306}
+          m_MethodName: spawnWatsonUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Notes
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171680797555306}
+          m_MethodName: spawnNotepadUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Alerts
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171680797555306}
+          m_MethodName: spawnAlertsUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Appendix
+    KeyCode: 0
+    Response:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
 --- !u!114 &114171680797555306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,6 +174,18 @@ MonoBehaviour:
   qrReader: {fileID: 1965899061894136, guid: df36b37d07cf2514584bb1751226ec04, type: 2}
   ARCamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
   Hololens: {fileID: 20000013304850028, guid: d379ed0a5618c9f479f58bd83a2d0ad3, type: 2}
+  keyboard: {fileID: 146120, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 2}
+--- !u!114 &114541056858893154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e5f98320fb38641976f7146f05256a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114775942573696482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,4 +199,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sampleAlert: {fileID: 1213960100516370, guid: a69d477df8d04444ab4858b336180f07,
     type: 2}
+  newAlert: {fileID: 1494497117083622, guid: a7f547281db0f8f42b89e0489aadf05a, type: 2}
   popupUI: {fileID: 1179969217018054, guid: eda55d77b5209d5448e573f70482471b, type: 2}
+--- !u!114 &114931936540512558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006125429048406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1616d182f52444044b2e2acbb7b7ecca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popup: {fileID: 1179969217018054, guid: eda55d77b5209d5448e573f70482471b, type: 2}

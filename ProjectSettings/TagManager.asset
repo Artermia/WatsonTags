@@ -14,6 +14,7 @@ TagManager:
   - Watson
   - WatsonHandler
   - WatsonInput
+  - Keyboard
   layers:
   - Default
   - TransparentFX

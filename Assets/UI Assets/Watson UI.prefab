@@ -1582,7 +1582,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Fever
       m_Image: {fileID: 0}
-    - m_Text: Bleeding
+    - m_Text: Internal Bleeding
       m_Image: {fileID: 0}
     - m_Text: Fatigue
       m_Image: {fileID: 0}
@@ -1594,9 +1594,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Diarrhea
       m_Image: {fileID: 0}
-    - m_Text: Stiffness
+    - m_Text: Stiff Neck
       m_Image: {fileID: 0}
-    - m_Text: Broken Bone
+    - m_Text: Irritable
       m_Image: {fileID: 0}
     - m_Text: Arm Pain
       m_Image: {fileID: 0}
@@ -2071,7 +2071,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Fever
       m_Image: {fileID: 0}
-    - m_Text: Bleeding
+    - m_Text: Internal Bleeding
       m_Image: {fileID: 0}
     - m_Text: Fatigue
       m_Image: {fileID: 0}
@@ -2083,9 +2083,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Diarrhea
       m_Image: {fileID: 0}
-    - m_Text: Stiffness
+    - m_Text: Stiff Neck
       m_Image: {fileID: 0}
-    - m_Text: Broken Bone
+    - m_Text: Irritable
       m_Image: {fileID: 0}
     - m_Text: Arm Pain
       m_Image: {fileID: 0}
@@ -2152,7 +2152,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Fever
       m_Image: {fileID: 0}
-    - m_Text: Bleeding
+    - m_Text: Internal Bleeding
       m_Image: {fileID: 0}
     - m_Text: Fatigue
       m_Image: {fileID: 0}
@@ -2164,9 +2164,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Diarrhea
       m_Image: {fileID: 0}
-    - m_Text: Stiffness
+    - m_Text: Stiff Neck
       m_Image: {fileID: 0}
-    - m_Text: Broken Bone
+    - m_Text: Irritable
       m_Image: {fileID: 0}
     - m_Text: Arm Pain
       m_Image: {fileID: 0}

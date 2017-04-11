@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 114349367455615398}
   - component: {fileID: 114622772822634478}
   m_Layer: 5
-  m_Name: Bleeding
+  m_Name: Internal Bleeding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 114419477859241956}
   - component: {fileID: 114886448808339488}
   m_Layer: 5
-  m_Name: Broken Bone
+  m_Name: Irritable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 114061064155110374}
   - component: {fileID: 114124716425207788}
   m_Layer: 5
-  m_Name: Stiffness
+  m_Name: Stiff Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,7 +797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114593325921593962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Back Pain
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114013512179891826
@@ -952,7 +964,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114170779819400490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Discoloration
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114088350690567818
@@ -1026,7 +1050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114543664775996092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Nausea
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114117598203944786
@@ -1088,7 +1124,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114061064155110374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stiff neck
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114127181540112390
@@ -1243,7 +1291,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Broken Bone
+  m_Text: Irritable
 --- !u!114 &114218145790763030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1358,7 +1406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114737770421129370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sweating
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114341888094530662
@@ -1393,7 +1453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bleeding
+  m_Text: Internal Bleeding
 --- !u!114 &114349367455615398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1542,7 +1602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114224698827920502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fever
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114419477859241956
@@ -1670,7 +1742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114421666059720242}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Neck Pain
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114518461746148686
@@ -1705,7 +1789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stiffness
+  m_Text: Stiff Neck
 --- !u!114 &114530630074845924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1887,7 +1971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114821192283216350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cramping Leg Pain
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114593325921593962
@@ -1955,7 +2051,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114700049453618626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cough
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114607981339862388
@@ -1996,7 +2104,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114127181540112390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Headache
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114617043229779860
@@ -2103,7 +2223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114349367455615398}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Internal Bleeding
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114700049453618626
@@ -2410,7 +2542,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114419477859241956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Irritable
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114889011802885056
@@ -2451,7 +2595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114068773831077362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diarrhea
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114891112608448962
@@ -2677,7 +2833,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114895865486059244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Arm Pain
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114980631946488854
@@ -2745,7 +2913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114076849130759598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114931936540512558, guid: 6c21708a32037504aa4069545931c644,
+          type: 2}
+        m_MethodName: spawnSymptom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fatigue
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &222019767971267718
@@ -3153,7 +3333,7 @@ RectTransform:
   m_Children:
   - {fileID: 224305964500096184}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3172,7 +3352,7 @@ RectTransform:
   m_Children:
   - {fileID: 224084325981911010}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3300,7 +3480,7 @@ RectTransform:
   m_Children:
   - {fileID: 224235180084898026}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3319,7 +3499,7 @@ RectTransform:
   m_Children:
   - {fileID: 224695388783530532}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3418,7 +3598,7 @@ RectTransform:
   m_Children:
   - {fileID: 224830638241644754}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3455,7 +3635,7 @@ RectTransform:
   m_Children:
   - {fileID: 224352803828054196}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3530,13 +3710,13 @@ RectTransform:
   - {fileID: 224789001776625052}
   - {fileID: 224577952315606050}
   - {fileID: 224744300929217690}
-  - {fileID: 224292248703300832}
   - {fileID: 224600982483735116}
   - {fileID: 224642395037459028}
   - {fileID: 224292917944031114}
   - {fileID: 224515911516363066}
   - {fileID: 224513457127199052}
   - {fileID: 224962737180588638}
+  - {fileID: 224292248703300832}
   - {fileID: 224086765539489076}
   - {fileID: 224306486964422128}
   - {fileID: 224981729452919438}
@@ -3803,7 +3983,7 @@ RectTransform:
   m_Children:
   - {fileID: 224800627355569958}
   m_Father: {fileID: 224727573702679512}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
