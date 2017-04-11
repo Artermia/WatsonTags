@@ -134,7 +134,6 @@ MonoBehaviour:
   mWidth: 0.001
   mHeight: 0.001
   mainMenu: {fileID: 0}
-  QRcamera: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
 --- !u!114 &114046570675432142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,7 +252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Manual Load
 --- !u!114 &114726407064410692
 MonoBehaviour:
   m_ObjectHideFlags: 1
