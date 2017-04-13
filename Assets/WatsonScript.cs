@@ -37,7 +37,9 @@ public class WatsonScript : MonoBehaviour {
             if(input.GetComponent<Dropdown>().value != 0)
             {
                 default_input = false;
-                symptoms += "%20" + input.GetComponent<Dropdown>().options[input.GetComponent<Dropdown>().value].text;
+                string temp = input.GetComponent<Dropdown>().options[input.GetComponent<Dropdown>().value].text;
+                temp = temp.Replace(" ", "%20");
+                symptoms += "%20" + temp;
             }
         }
 
